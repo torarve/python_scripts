@@ -12,7 +12,7 @@ URL = "http://checkip.dyndns.com/"
 
 def get_external_ip():
     res = urllib2.urlopen(URL)
-    ex = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", res.read())
+    ex = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", str(res.read()))
     return ex[0]
 
 
